@@ -4,7 +4,7 @@ public class Journal
 {
     public int Id { get; set; }
 
-    public string OwnerId { get; set; } = default!;
+    public int OwnerId { get; set; } = default!;
 
     public string DocumentB64 { get; set; } = default!;
 

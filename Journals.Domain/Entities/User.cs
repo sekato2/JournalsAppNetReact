@@ -10,5 +10,7 @@ public class User
 
     public string Pass { get; set; } = default!;
 
+    public List<Journal> Journals { get; set; } = default!;
+
     public bool Status { get; set; }
 }

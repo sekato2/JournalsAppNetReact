@@ -11,14 +11,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Journals.Application\Journals.Application.csproj" />
+    <ProjectReference Include="..\Journals.Infraestructure\Journals.Infraestructure.csproj" />
     <ProjectReference Include="..\journalsappnetreact.client\journalsappnetreact.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
-      <Version>8.*-*</Version>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
