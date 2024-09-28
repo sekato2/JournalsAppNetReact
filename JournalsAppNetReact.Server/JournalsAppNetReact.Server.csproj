@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Journals.Application\Journals.Application.csproj" />
     <ProjectReference Include="..\journalsappnetreact.client\journalsappnetreact.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
