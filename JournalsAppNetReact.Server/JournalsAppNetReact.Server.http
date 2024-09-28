@@ -1,0 +1,9 @@
+@JournalsAppNetReact.Server_HostAddress = https://localhost:7213
+
+
+
+###
+
+GET {{JournalsAppNetReact.Server_HostAddress}}/api/journals
+
+###
