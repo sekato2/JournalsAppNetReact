@@ -1,6 +1,7 @@
 ﻿using Journals.Domain.Repositories;
 using Journals.Infraestructure.Persistence;
 using Journals.Infraestructure.Repositories;
+using Journals.Infraestructure.Seeders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,7 @@ public static class ServiceCollectionExtensions
         var connectionString = configuration.GetConnectionString("JournalDB");
         services.AddDbContext<JournalDbContext>(options => options.UseSqlServer(connectionString));
 
+        services.AddScoped<IJournalSeeder, JournalSeeder>();
         services.AddScoped<IJournalRepository, JournalRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
     }
