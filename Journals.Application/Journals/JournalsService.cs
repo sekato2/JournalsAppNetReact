@@ -22,5 +22,11 @@ namespace Journals.Application.Journals
             var journal = await journalRepository.GetById(id);
             return journal;
         }
+
+        public async Task<IEnumerable<Journal?>> GetByUserId(int id)
+        {
+            var journals = await journalRepository.GetByUserId(id);
+            return journals;
+        }
     }
 }

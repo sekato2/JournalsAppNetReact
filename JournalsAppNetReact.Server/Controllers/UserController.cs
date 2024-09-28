@@ -30,4 +30,18 @@ public class UserController(IUsersService usersServices) : ControllerBase
         int id = await usersServices.Create(user);
         return CreatedAtAction(nameof(GetById), new { id }, null);
     }
+
+    [HttpPost("suscribe")]
+    public async Task<IActionResult> Suscribe(int subscribedToId, int subscriberId)
+    {
+        await usersServices.Suscribe(subscribedToId, subscriberId);
+        return Ok();
+    }
+
+    [HttpPost("unsuscribe")]
+    public async Task<IActionResult> Unsubscribe(int subscribedToId, int subscriberId)
+    {
+        await usersServices.Unsubscribe(subscribedToId, subscriberId);
+        return NoContent();
+    }
 }

@@ -37,6 +37,20 @@ Content-Type: application/json
 
 ###
 
-GET {{JournalsAppNetReact.Server_HostAddress}}/api/users/11
+GET {{JournalsAppNetReact.Server_HostAddress}}/api/users/7
+
+### 
+
+GET {{JournalsAppNetReact.Server_HostAddress}}/api/journals/GetByUserId/1
+
+###
+
+POST {{JournalsAppNetReact.Server_HostAddress}}/api/users/suscribe?subscribedToId=1&subscriberId=7
+
+
+###
+
+POST {{JournalsAppNetReact.Server_HostAddress}}/api/users/unsuscribe?subscribedToId=1&subscriberId=7
+
 
 ###

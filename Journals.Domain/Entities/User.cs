@@ -10,7 +10,11 @@ public class User
 
     public string Pass { get; set; } = default!;
 
-    public List<Journal>? Journals { get; set; }
+    public List<Journal> Journals { get; set; } = new();
+
+    public List<User> Subscribers { get; set; } = new();
+
+    public List<User> Subscriptions { get; set; } = new();
 
     public bool Status { get; set; }
 }

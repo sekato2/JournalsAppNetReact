@@ -16,6 +16,9 @@ internal class JournalDbContext(DbContextOptions<JournalDbContext> options) : Db
             .HasMany(y => y.Journals)
             .WithOne()
             .HasForeignKey(y => y.OwnerId);
-    }
 
+        modelBuilder.Entity<User>()
+            .HasMany(y => y.Subscriptions)
+            .WithMany(y => y.Subscribers);
+    }
 }

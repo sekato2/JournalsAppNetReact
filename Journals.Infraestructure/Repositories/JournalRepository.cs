@@ -25,4 +25,10 @@ internal class JournalRepository(JournalDbContext dbContext) : IJournalRepositor
         var journal = await dbContext.Journals.FirstOrDefaultAsync(y => y.Id == id);
         return journal;
     }
+
+    public async Task<IEnumerable<Journal?>> GetByUserId(int id)
+    {
+        var journals = await dbContext.Journals.Where(y => y.OwnerId == id).ToListAsync();
+        return journals;
+    }
 }

@@ -15,6 +15,13 @@ public class JournalsController(IJournalsService journalsServices) : ControllerB
         return Ok(journals);
     }
 
+    [HttpGet("GetByUserId/{userId}")]
+    public async Task<IActionResult> GetByUserId([FromRoute] int userId)
+    {
+        var journals = await journalsServices.GetByUserId(userId);
+        return Ok(journals);
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById([FromRoute] int id)
     {
